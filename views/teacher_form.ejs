@@ -19,9 +19,10 @@
         <div class="log-form">
               <h2 style="margin: 30px;">Teacher</h2>
               <form action="/api/v1/create/create-teacher" method="post">
+                <input type="number" name="id" placeholder="id of teacher" />
                 <input type="text" name="name" placeholder="name of Teacher" />
                 <input type="text" name="desc" size="50" placeholder="Descripton for the Teacher" />
-                
+                <input type="number" name="courses_taken" placeholder="id of course taught" />
                 <button type="submit" class="btn">submit</button>
               </form>
           </div><!--end log form -->

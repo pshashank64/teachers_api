@@ -19,16 +19,29 @@ module.exports.createBatch = (req, res) => {
     })
 }
 
-module.exports.createCourse = (req, res) => {
-    Course.create(req.body, (err) => {
+module.exports.createCourse = async (req, res) => {
+    let students = await Student.find({courseId: req.body.courseId});
+    Course.create({
+        courseId: req.body.courseId,
+        name: req.body.name,
+        taught_by: req.body.taught_by,
+        enrolled_students: students
+    }, (err) => {
         if(err){console.log("Error n creating course!", err); return}
         console.log("Data in course inserted!");
         return res.redirect("/");
     })
 }
 
-module.exports.createTeacher = (req, res) => {
-    Teacher.create(req.body, (err) => {
+module.exports.createTeacher = async (req, res) => {
+    let Batches = await Batch.find({courseId: req.body.courses_taken});
+    Teacher.create({
+        id: req.body.id,
+        name: req.body.name,
+        desc: req.body.desc,
+        courses_taken: req.body.courses_taken,
+        batches: Batches
+    }, (err) => {
         if(err){console.log("Error n creating teacher!", err); return}
         console.log("Data in teacher inserted!");
         return res.redirect("/");

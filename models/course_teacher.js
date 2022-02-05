@@ -7,6 +7,9 @@ const courseSchema = new mongoose.Schema({
     name: {
         type: String,
     },
+    taught_by: {
+        type: Number
+    },
     enrolled_students: [
         {
             type: mongoose.Schema.Types.ObjectId,
