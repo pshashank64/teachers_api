@@ -1,0 +1,16 @@
+name: "Rohan",
+desc: "lwehb",
+courses_taken: [
+    courseId: 1,
+    name: "physics",
+    enrolled_students: [
+        name: "Shashank",
+        contact: 56789032,
+        email: "someone@gmail.com"
+    ]
+],
+batches: [
+    name: "b1",
+    date: 2022/12/12,
+    time: "15:45"
+]
