@@ -17,14 +17,12 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="log-form">
-            <h2>Student</h2>
-            <form action="/api/v1/create" method="post">
-              <input type="text" name="name" placeholder="username" />
-              <input type="number" name="contact" placeholder="contact" />
-              <input type="email" name="email" placeholder="email" />
-              <input type="number" name="courseId" placeholder="courseId" />
-              <button type="submit" class="btn">Login</button>
-            </form>
+              <h2 style="margin: 30px;">Course</h2>
+              <form action="/api/v1/create/create-course" method="post">
+                <input type="number" name="courseId" placeholder="course ID" />
+                <input type="text" name="name" placeholder="name of course" />
+                <button type="submit" class="btn">submit</button>
+              </form>   
           </div><!--end log form -->
         <script src="" async defer></script>
     </body>
