@@ -7,7 +7,11 @@ module.exports.createStudent = (req, res) => {
     var mydata = new Student(req.body);
     mydata.save()
         .then(item => {
-            res.send(item);
+            res.send({
+                "data": item,
+                "status": 200,
+                "message": "Student created"
+            });
             console.log(item)
         })
         .catch(err => {
@@ -19,7 +23,11 @@ module.exports.createBatch = (req, res) => {
     var mydata = new Batch(req.body);
     mydata.save()
         .then(item => {
-            res.send(item);
+            res.send({
+                "data": item,
+                "status": 200,
+                "message": "Batch created"
+            });
             console.log(item)
         })
         .catch(err => {
@@ -37,7 +45,11 @@ module.exports.createCourse = async (req, res) => {
     });
     mydata.save()
         .then(item => {
-            res.send(item);
+            res.send({
+                "data": item,
+                "status": 200,
+                "message": "Course created"
+            });
             console.log(item)
         })
         .catch(err => {
@@ -56,7 +68,11 @@ module.exports.createTeacher = async (req, res) => {
     });
     mydata.save()
         .then(item => {
-            res.send(item);
+            res.send({
+                "data": item,
+                "status": 200,
+                "message": "Teacher created"
+            });
             console.log(item)
         })
         .catch(err => {
